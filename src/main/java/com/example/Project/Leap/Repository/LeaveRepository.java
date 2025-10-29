@@ -9,5 +9,5 @@ import com.example.Project.Leap.Entity.LeaveRequest;
 
 @Repository
 public interface LeaveRepository  extends JpaRepository<LeaveRequest, Integer>{
-    List<LeaveRequest> findByUser_id(int user_id);
+    List<LeaveRequest> findByUserId(int userId);
 }
