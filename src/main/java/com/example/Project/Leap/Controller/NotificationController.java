@@ -19,8 +19,8 @@ public class NotificationController {
     private NotificationService notifi;
 
     @PostMapping("/LMS/Send")
-    public Notification send(@RequestParam int user_id, @RequestParam String message){
-        return notifi.sendNotification(user_id,message); 
+    public Notification send(@RequestParam("user_id") int userId, @RequestParam String message){
+        return notifi.sendNotification(userId,message); 
     }
 
     @GetMapping("/LMS/user/{id}")
