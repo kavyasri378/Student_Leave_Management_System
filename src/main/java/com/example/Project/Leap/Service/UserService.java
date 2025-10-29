@@ -19,6 +19,7 @@ public class UserService {
 
     //login function
     public User login(String email,String password){
-        User user= userRepo.
+        User user= userRepo.findByEmailAndPassword(email, password);
+        return user;
     }
 }
