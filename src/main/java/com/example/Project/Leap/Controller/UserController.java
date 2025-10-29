@@ -1,7 +1,10 @@
 package com.example.Project.Leap.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,6 +34,11 @@ public class UserController {
         else{
             return "Invalid email or password .Please try again later.";
         }
+    }
+
+    @GetMapping("/LMS/users")
+    public List<User> getAllUsers(){
+        return userService.getAllUsers();
     }
     
     
