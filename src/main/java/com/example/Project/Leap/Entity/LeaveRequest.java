@@ -1,12 +1,20 @@
 package com.example.Project.Leap.Entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.Data;
 
 @Data
 @Entity
 public class LeaveRequest {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int user_id;
     private String leaveType;
