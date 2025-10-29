@@ -17,7 +17,7 @@ public class NotificationService {
     //to send notification user
     public Notification sendNotification(int user_id,String msg){
         Notification n=new Notification();
-        n.setUser_id(user_id);
+        n.setUserId(user_id);
         n.setMessage(msg);
         n.setSentTime(LocalDateTime.now());
         return repo.save(n);
@@ -25,7 +25,7 @@ public class NotificationService {
     
     //to get all notifications of a user
     public List<Notification> getUserNotifications(int user_id){
-        return repo.findByUser_id(user_id);
+        return repo.findByUserId(user_id);
 }
 
 }
