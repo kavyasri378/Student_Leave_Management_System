@@ -17,6 +17,6 @@ public class User {
     private String email;
     private String password;
     private String role;   //roles like emp,manager,admin
-    private int leavebalance=0;
+    private int leavebalance=10;
 
 }
