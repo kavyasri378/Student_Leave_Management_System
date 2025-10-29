@@ -1,12 +1,11 @@
 package com.example.Project.Leap.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
 
 @Data
@@ -16,7 +15,7 @@ public class LeaveRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int user_id;
+    private int userId;
     private String leaveType;
     private LocalDate startDate;
     private LocalDate endDate;
