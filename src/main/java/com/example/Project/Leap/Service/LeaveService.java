@@ -21,7 +21,7 @@ public class LeaveService {
     private UserRepository userRepo;
 
     public LeaveRequest applyLeave (LeaveRequest leaveRequest){
-        User user = userRepo.findById(leaveRequest.getUser_id()).orElse(null);
+    User user = userRepo.findById(leaveRequest.getUserId()).orElse(null);
         
         if(user==null) return null;//if user not  found
 
@@ -64,7 +64,7 @@ public List<LeaveRequest> getAllLeaveRequests(){
 
 //to get all leave request by user id
 public List<LeaveRequest> getLeaveRequestsByUserId(int user_id){
-    return leaveRepo.findByUser_id(user_id);
+    return leaveRepo.findByUserId(user_id);
 }
 
 }
