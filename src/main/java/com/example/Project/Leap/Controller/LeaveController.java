@@ -3,6 +3,7 @@ package com.example.Project.Leap.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -11,9 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Project.Leap.Entity.LeaveRequest;
 import com.example.Project.Leap.Service.LeaveService;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -43,8 +41,8 @@ public class LeaveController {
     }
     
     @GetMapping("/LMS/leave/user/{user_id}")
-    public List<LeaveRequest> ggetLeaveRequestsByUserId(@PathVariable int user_id){
-        return leaveService.getLeaveRequestsByUserId(user_id);
+    public List<LeaveRequest> ggetLeaveRequestsByUserId(@PathVariable("user_id") int userId){
+        return leaveService.getLeaveRequestsByUserId(userId);
     }
 
 }
