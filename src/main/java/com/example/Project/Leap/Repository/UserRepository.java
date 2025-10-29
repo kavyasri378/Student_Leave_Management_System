@@ -7,5 +7,5 @@ import com.example.Project.Leap.Entity.User;
 
 @Repository
 public interface  UserRepository extends JpaRepository<User, Integer>{
-    
+    User findByEmailAndPassword(String email,String password);
 }
