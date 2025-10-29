@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 import com.example.Project.Leap.Entity.Notification;
 @Repository
 public interface  NotificationRepository extends JpaRepository<Notification,Integer>{
-    List<Notification> findByUser_id(int user_id);
+    List<Notification> findByUserId(int userId);
 }
